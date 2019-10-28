@@ -1,0 +1,42 @@
+﻿@model Goods
+
+<!-- Single Product Area -->
+        <div class="col-12 col-sm-6 col-md-12 col-xl-6 custom-container">
+    
+            <div class="single-product-wrapper">
+                <!-- Product Image -->
+                <div class="product-img">
+                    <img src="@Model.img" alt="@Model.name">
+                    <!-- Hover Thumb -->
+                    <!-- <img class="hover-img" src="img/product-img/product3.jpg" alt="">-->
+                </div>
+
+                <!-- Product Description -->
+                <div class="product-description d-flex align-items-center justify-content-between">
+                    <!-- Product Meta Data -->
+                    <div class="product-meta-data">
+                        <div class="line"></div>
+                        <p class="product-price">@Model.price.ToString("c", CultureInfo.CreateSpecificCulture("en-US"))</p>
+                        <a href="product-details.html">
+                            <h6>@Model.shortDesc</h6>
+                        </a>
+                    </div>
+                    <!-- Ratings & Cart -->
+                    <div class="ratings-cart text-right">
+                        <div class="ratings">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <div class="cart">
+                            <a asp-controller="ShopCart" asp-action="addToCart" asp-route-id="@Model.id" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="/img/core-img/cart.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    

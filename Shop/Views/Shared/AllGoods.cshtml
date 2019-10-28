@@ -1,0 +1,15 @@
+﻿@model Shop.Data.Models.Goods
+ <!-- Single Product Area -->
+<!---->
+    <div class="single-products-catagory clearfix">
+        <a href="/Goods/List">
+            <img src="@Model.img" alt="@Model.name">
+            <!-- Hover Content -->
+            <div class="hover-content">
+                <div class="line"></div>
+                <p>From @Model.price.ToString("c", CultureInfo.CreateSpecificCulture("en-US"))</p>
+                <h4>@Model.shortDesc</h4>
+            </div>
+        </a>
+    </div>
+

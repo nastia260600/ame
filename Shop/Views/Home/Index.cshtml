@@ -1,0 +1,12 @@
+﻿@model HomeViewModel
+<div class="products-catagories-area clearfix">
+    <div class="amado-pro-catagory clearfix">
+        @{
+            foreach (Goods goods in Model.favGoods)
+            { 
+                <!-- Single Catagory -->
+                @Html.Partial("AllGoods", goods)
+            }
+        }
+    </div>
+</div>
