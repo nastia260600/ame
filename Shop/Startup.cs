@@ -45,8 +45,8 @@ namespace Shop
             services.AddMemoryCache();
             services.AddSession();
 
-            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<ApplicationContext>();
+           /* services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<ApplicationContext>();*/
 
             services.AddMvc();
         }
